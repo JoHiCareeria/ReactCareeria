@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
-const Laskuri = (props) => { 
+
+const Laskuri = ({huomio}) => { 
 
     const [luku, setLuku] = useState(0);
 // useState on Reactin hook, joka mahdollistaa tilan (state) käytön funktionaalisissa komponenteissa. 
@@ -12,7 +13,7 @@ const Laskuri = (props) => {
         <h3></h3>
         <button onClick={() => setLuku(luku - 1)}>-</button>
         <h3></h3>
-        <button onClick={() => { setLuku(0); props.huomio(); }}>Reset</button> 
+        <button onClick={() => { setLuku(0); huomio(); }}>Reset</button> 
 
     </>
   );

@@ -3,6 +3,7 @@ import './App.css';
 import Laskuri from './Laskuri';
 import Viesti from './Viesti';
 import Väri from './Värit';
+import Posts from './Posts';
 
 
 const App = () => { 
@@ -16,7 +17,7 @@ const huomio = () => {
   return ( 
     <div className="App">
       <h1>Hello from React!</h1>
-
+      <Posts />
       {showLaskuri && <Laskuri huomio={huomio}/>}
       {showLaskuri === true? <Laskuri /> : null}
       {showLaskuri && <button onClick={() => setShowLaskuri(false)}>Piilota laskuri</button>}
