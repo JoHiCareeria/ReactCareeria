@@ -9,6 +9,7 @@ import Posts from './Posts';
 const App = () => { 
 
 const [showLaskuri, setShowLaskuri] = useState(false);
+const [showPosts, setShowPosts] = useState(false);
 
 const huomio = () => {
   alert("Huomio! Laskuri resetoitu!");
@@ -17,7 +18,9 @@ const huomio = () => {
   return ( 
     <div className="App">
       <h1>Hello from React!</h1>
-      <Posts />
+      {showPosts && <button onClick={() => setShowPosts(false)}>Piilota postaukset</button>}
+      {!showPosts && <button onClick={() => setShowPosts(true)}>Näytä postaukset</button>}
+      {showPosts && <Posts />}
       {showLaskuri && <Laskuri huomio={huomio}/>}
       {showLaskuri === true? <Laskuri /> : null}
       {showLaskuri && <button onClick={() => setShowLaskuri(false)}>Piilota laskuri</button>}

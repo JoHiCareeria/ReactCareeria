@@ -15,7 +15,7 @@ const Posts = () => {
   return ( 
     <>
       <h2>Posts from typicode</h2>
-      <table border="1">
+      <table className="taulu" border="1">
         <thead>
           <tr>
             <th>ID</th>
@@ -25,7 +25,7 @@ const Posts = () => {
         </thead>
         <tbody>
           {posts.map(post => ( // mapataan posts-taulukko ja luodaan jokaiselle postaukselle taulukkorivi (tr), jossa näytetään id, userId, title ja body. Key-attribuutti on tärkeä Reactille, jotta se osaa optimoida uudelleenrenderöinnin.
-            <tr key={post.id}> // Key-attribuutti on tärkeä Reactille, jotta se osaa optimoida uudelleenrenderöinnin. Tässä tapauksessa käytetään post.id:tä avaimena, koska se on uniikki tunniste jokaiselle postaukselle.
+            <tr key={post.id}>
               <td>{post.id}</td>
               <td>{post.userId}</td>
               <td>{post.title}</td>
