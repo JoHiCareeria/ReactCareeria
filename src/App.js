@@ -4,6 +4,7 @@ import Laskuri from './Laskuri';
 import Viesti from './Viesti';
 import Väri from './Värit';
 import Posts from './Posts';
+import CustomerList from './CustomerList';
 
 
 const App = () => { 
@@ -25,6 +26,7 @@ const huomio = () => {
       {showLaskuri === true? <Laskuri /> : null}
       {showLaskuri && <button onClick={() => setShowLaskuri(false)}>Piilota laskuri</button>}
       {!showLaskuri && <button onClick={() => setShowLaskuri(true)}>Näytä laskuri</button>}
+      <CustomerList />
       
       <Viesti teksti="tässä on viesti"/>
       <Viesti teksti="tässä on toinen viesti"/>

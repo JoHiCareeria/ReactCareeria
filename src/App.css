@@ -9,6 +9,14 @@
   color: green;
   border-style: solid;
 }
+.customerDetails {
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: lightblue;
+  color: green;
+  border-style: solid;
+}
 
 .button {
   margin: 10px;
