@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 const Customer = ({customer}) => { 
 
-    const [showDetails, setShowDetails] = useState(false); //
+    const [showDetails, setShowDetails] = useState(false);
 
   return ( 
     <div className="custDiv">
@@ -11,13 +11,13 @@ const Customer = ({customer}) => {
         <h4 onClick={() => setShowDetails(!showDetails)}>{customer.companyName}</h4>
         
         {showDetails && <div className="customerDetails">
+            <h5 className="companyDetails">{customer.companyName.toUpperCase()} Details</h5>
             <table>
                 <thead>
                     <tr>
                         <th>Contact person</th>
                         <th>Phone</th>
                         <th>Address</th>
-                        <th>City</th>
                         <th>City</th>
                         <th>Country</th>
                     </tr>
