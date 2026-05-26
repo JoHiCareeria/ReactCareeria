@@ -1,7 +1,844 @@
 .App {
   text-align: center;
 }
+/*-----------------AddUser-----------------*/
+#userAddWindow {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
 
+#userAddWindow h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#registrationForm div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#registrationForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+#registrationForm input[type="text"],
+#registrationForm input[type="number"],
+#registrationForm input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#registrationForm input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+#registrationForm p {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#registrationForm #submitButton,
+#registrationForm input[type="button"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#registrationForm #submitButton {
+  background-color: #0078ff;
+  color: white;
+}
+
+#registrationForm #submitButton:hover {
+  background-color: #005fcc;
+}
+
+#registrationForm input[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+#registrationForm input[type="button"]:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  #userAddWindow {
+    padding: 20px;
+  }
+}
+/*-----------------AddUserEnds-----------------*/
+/*-----------------EditUser--------------------*/
+.editUser {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.editUser h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.editUser form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.editUser input[type="text"],
+.editUser input[type="number"],
+.editUser input[type="email"],
+.editUser input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.editUser input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+.editUser input[disabled] {
+  background-color: #f2f2f2;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.editUser input[type="submit"],
+.editUser button[type="button"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.editUser input[type="submit"] {
+  background-color: #0078ff;
+  color: white;
+}
+
+.editUser input[type="submit"]:hover {
+  background-color: #005fcc;
+}
+
+.editUser button[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+.editUser button[type="button"]:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  .editUser {
+    padding: 20px;
+  }
+}
+/*-----------------EditUserEnds----------------*/
+.passwordError {
+  color: red;
+  display: none;
+}
+.tehtavatTaulu {
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: lightblue;
+  color: black;
+}
+.tehtavatTaulu tr:hover td {
+  background-color: lightyellow;
+}
+.tehtavatTaulu th, .tehtavatTaulu tr {
+  background-color: navy;
+  color: white;
+  padding: 5px;
+  border: #282c34 solid 1px;
+}
+.tehtavatTaulu td {
+  background-color: lightblue;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+}
+.saveButton {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(2, 255, 2);
+  color: black;
+}
+.backButton {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: black;
+}
+.taulu {
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: lightblue;
+  color: black;
+}
+.customerDetails table{
+  background-color: navy;
+  margin: auto;
+  color: yellow;
+  width: 50%;
+}
+.customerDetails td, .customerDetails th {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: rgb(255, 0, 0);
+}
+.productTable th {
+  background-color: navy;
+  color: white;
+  padding: 5px;
+}
+.productTable td {
+  background-color: lightblue;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+}
+.productTable {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 95%;
+  table-layout: fixed;
+}
+.productTable th,
+.productTable td {
+  white-space: normal; 
+  overflow-wrap: anywhere;
+}
+.productTable tr:hover td {
+  background-color: lightyellow;
+}
+.employeeTable th {
+  background-color: navy;
+  color: white;
+  padding: 5px;
+}
+.employeeTable td {
+  background-color: lightblue;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.employeeTable {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 95%;
+  table-layout: fixed;
+}
+.employeeTable th,
+.employeeTable td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.employeeTable tr:hover td {
+  background-color: lightyellow;
+}
+
+/*-----------------EmployeeAddTable-----------------*/
+#addNewEmployee {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#addNewEmployee h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#addNewEmployee form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#addNewEmployee label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+#addNewEmployee input[type="text"],
+#addNewEmployee input[type="number"],
+#addNewEmployee input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#addNewEmployee input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+.saveButton,
+.backButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.saveButton {
+  background-color: #0078ff;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #005fcc;
+}
+
+.backButton {
+  background-color: #ddd;
+  color: #333;
+}
+
+.backButton:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  #addNewEmployee {
+    padding: 20px;
+  }
+}
+/*-----------------EmployeeAddTableEnds*****************/
+
+@media (max-width: 900px) {
+  .productTable th,
+  .productTable td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+/*-----------------EditEmployee--------------------*/
+#editEmployee {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#editEmployee h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#editEmployee form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#editEmployee label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+#editEmployee input[type="text"],
+#editEmployee input[type="number"],
+#editEmployee input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#editEmployee input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+#editEmployee input[disabled] {
+  background-color: #f2f2f2;
+  color: #777;
+  cursor: not-allowed;
+}
+
+#editEmployee input[type="submit"],
+#editEmployee input[type="button"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#editEmployee input[type="submit"] {
+  background-color: #0078ff;
+  color: white;
+}
+
+#editEmployee input[type="submit"]:hover {
+  background-color: #005fcc;
+}
+
+#editEmployee input[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+#editEmployee input[type="button"]:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  #editEmployee {
+    padding: 20px;
+  }
+}
+/*-----------------EditEmployeeEnds-----------------*/
+/*-----------------ProductAddTable-----------------*/
+#addNewProduct {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#addNewProduct h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#addNewProduct form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#addNewProduct label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+#addNewProduct input[type="text"],
+#addNewProduct input[type="number"],
+#addNewProduct input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#addNewProduct input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+#addNewProduct input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#addNewProduct .saveButton,
+#addNewProduct .backButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#addNewProduct .saveButton {
+  background-color: #0078ff;
+  color: white;
+}
+
+#addNewProduct .saveButton:hover {
+  background-color: #005fcc;
+}
+
+#addNewProduct .backButton {
+  background-color: #ddd;
+  color: #333;
+}
+
+#addNewProduct .backButton:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  #addNewProduct {
+    padding: 20px;
+  }
+}
+/*-----------------ProductAddTableEnds-----------------*/
+/*-----------------ProductEditTable-----------------*/
+.updateForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.updateForm h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.updateForm form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.updateForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.updateForm input[type="text"],
+.updateForm input[type="number"],
+.updateForm input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.updateForm input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+.updateForm input[disabled] {
+  background-color: #f2f2f2;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.updateForm input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.updateForm input[type="submit"],
+.updateForm input[type="button"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.updateForm input[type="submit"] {
+  background-color: #0078ff;
+  color: white;
+}
+
+.updateForm input[type="submit"]:hover {
+  background-color: #005fcc;
+}
+
+.updateForm input[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+.updateForm input[type="button"]:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  .updateForm {
+    padding: 20px;
+  }
+}
+/*-----------------ProductEditTable-----------------*/
+/*-----------------CustomerAddTable-----------------*/
+#addNew {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#addNew h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#addNew form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#addNew input[type="text"],
+#addNew input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#addNew input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  outline: none;
+}
+
+#addNew input[type="submit"],
+#addNew input[type="button"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#addNew input[type="submit"] {
+  background-color: #0078ff;
+  color: white;
+}
+
+#addNew input[type="submit"]:hover {
+  background-color: #005fcc;
+}
+
+#addNew input[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+#addNew input[type="button"]:hover {
+  background-color: #c5c5c5;
+}
+
+@media (max-width: 480px) {
+  #addNew {
+    padding: 20px;
+  }
+}
+/*-----------------CustomerAddTableEnds*****************/
+
+.companyDetails {
+  color: navy;
+  text-align: center;
+  font-size: large;
+  margin-bottom: 5px;
+}
+.custDiv {
+  color: black;
+}
+.positive {
+  color: green;
+  background-color: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  width: 70%;
+  margin-left: 15%;
+}
+.negative {
+  color: red;
+  background-color: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  width: 70%;
+  margin-left: 15%;
+}
+.nappi {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #61dafb;
+  color: green;
+}
+.editButton {
+  margin: 10px;
+  border: none;
+  background-color: white;
+  color: black;
+}
+.editButton:hover {
+  background-color: green;
+  color: white;
+}
+.deleteButton {
+  margin: 10px;
+  border: none;
+  background-color: white;
+  color: black;
+}
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+}
+.addNappi{
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #61dafb;
+  color: green;
+}
+.userTable {
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  color: black;
+  margin-top: 10px;
+}
+.userTable tr:hover td {
+  background-color: rgb(111, 137, 138);
+}
+.userTable th {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: forestgreen solid 1px;
+}
+.userTable td {
+  background-color: rgb(0, 255, 242);
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.button {
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #61dafb;
+  color: green;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
