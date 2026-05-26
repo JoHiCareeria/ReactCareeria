@@ -2,10 +2,10 @@ import './App.css';
 import React, {useState} from 'react';
 import CustomerService from './services/Customer';
 
-const CustomerAdd = ({setLisäystila, setIsPositive, setMessage, setShowMessage }) => { 
+const CustomerAdd = ({setLisäystila, setIsPositive, setMessage, setShowMessage  }) => {
     
     // Näissä useState-hookeissa määritellään tilamuuttujat, jotka pitävät kirjaa lomakkeelle syötetyistä tiedoista. Jokaisella kentällä on oma tilamuuttuja, joka päivittyy käyttäjän syötteen mukaan.
-    const [newCustomerId, setNewCustomerId] = useState(''); 
+    const [newCustomerId, setNewCustomerId] = useState(''); //
     const [newCompanyName, setNewCompanyName] = useState('');
     const [newContactName, setNewContactName] = useState('');
     const [newContactTitle, setNewContactTitle] = useState('');
@@ -37,8 +37,8 @@ const handleSubmit = (event) => {
     .then(response => {
         if(response.status === 200) {
         setMessage("Asiakas " + newCustomer.companyName + " lisätty onnistuneesti!");
-        setIsPositive(true);
-        setShowMessage(true);
+        setIsPositive(true); 
+        setShowMessage(true); 
 
         setTimeout(() => {
             setShowMessage(false);

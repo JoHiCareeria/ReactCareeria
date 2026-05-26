@@ -15,7 +15,7 @@ const CustomerUpdate = ({setMuokkausTila, setIsPositive, setMessage, setShowMess
     const [newpostalCode, setNewPostalCode] = useState(muokattavaCustomer.postalCode);
     const [newphone, setNewPhone] = useState(muokattavaCustomer.phone);
     const [newfax, setNewFax] = useState(muokattavaCustomer.fax);
-
+    const [isDisabled, setIsDisabled] = useState(false);
 
     const handleSubmit = (event) => { 
         event.preventDefault();
@@ -50,7 +50,7 @@ const CustomerUpdate = ({setMuokkausTila, setIsPositive, setMessage, setShowMess
             <h3>Update</h3>
             <form onSubmit={handleSubmit}>
             <div>
-            <input type="text" value={newcustomerId} onChange={(e) => setNewCustomerId(e.target.value)} placeholder="Customer ID" />
+            <input type="text" value={newcustomerId} onChange={(e) => setNewCustomerId(e.target.value)} placeholder="Customer ID" disabled={true} />
             </div>
             <div>
             <input type="text" value={newcompanyName} onChange={(e) => setNewCompanyName(e.target.value)} placeholder="Company Name" />
